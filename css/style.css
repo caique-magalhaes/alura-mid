@@ -1,0 +1,66 @@
+:root{
+    --cor-background: #aaa;
+    --cor-letra:  #e93d50;
+    --cor-fundo-teclas: #fff;
+    --cor-fund-active: #af303f;
+    --cor-luz: rgb(229,225,0);
+}
+body{
+    background: linear-gradient(45deg, #a7cfdf 0%,#23538a 100%);  
+    color: var(--cor-fundo-teclas);
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+.principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.teclado{
+    display: grid;
+    background: linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%);
+    padding: 10px;
+    gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+    box-shadow: 6px 8px 0 6px #666, 10px 10px 10px #000;
+    border-radius:30px;
+    text-align: center;
+}
+.teclas{
+    width: 120px;
+    height: 120px;
+    list-style: none;
+    border-radius: 30px;
+    box-shadow: 3px 3px 0 var(--cor-background);
+    line-height: 120px;  
+    font-size: 1.75em;
+    background-color: var(--cor-fundo-teclas);
+    color: var(--cor-letra);
+    font-weight: bold;
+
+}
+.principal__titulo{
+    font-size: 2rem;
+    color: var(--cor-fundo-teclas);
+}
+.teclas.ativa,
+.teclas:active {
+    background-color: var(--cor-letra);
+    border: 4px solid var(--cor-letra);
+    color: var(--cor-fundo-teclas);
+    box-shadow: 3px 3px 0 var(--cor-fund-active) inset;
+    outline: none;
+    
+}
+.teclas.focus,
+.teclas:focus{
+    box-shadow: 1px 1px 10px var(--cor-luz);
+}
+.teclas.ativa:focus,
+.teclas:active:focus{
+    box-shadow: 3px 3px 0 var(--vermelha-escura) inset, 1px 1px 10px var(--cor-luz);
+    
+}
